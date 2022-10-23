@@ -6,9 +6,9 @@ Send message to email via emailjs
 
 - Create an account emailjs: https://www.emailjs.com/
 - Adding an email service:
-- ![add server](https://drive.google.com/file/d/1CriMIwSzj6_d5-PPonheDIwU1tYMsZ2V/view?usp=sharing)
+- ![Create server](./public/create_server.png)
 - Creating an email template:
-- ![alt text](https://drive.google.com/file/d/1IF5qTTkAAc29ImHlyv_1JeyxAKGbx2ta/view?usp=sharing?raw=true)
+- ![Create template](./public/create_template.png)
 
 ## Installation & Run
 
