@@ -1,0 +1,14 @@
+.contact-us {
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 25px;
+  background: #b6ac50dd;
+}
+
+.title {
+  text-align: center;
+}
+
+label {
+  font-weight: 600;
+}
