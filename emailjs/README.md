@@ -1,26 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React-Emailjs
 
-![Project Preview](./src/contact.png)
+Send message to email via emailjs
 
-## Available Scripts
+#### Step by steps:
 
-In the project directory, you can run:
+- Create an account emailjs: https://www.emailjs.com/
+- Adding an email service:
+- ![add server](https://drive.google.com/file/d/1CriMIwSzj6_d5-PPonheDIwU1tYMsZ2V/view?usp=sharing)
+- Creating an email template:
+- ![alt text](https://drive.google.com/file/d/1IF5qTTkAAc29ImHlyv_1JeyxAKGbx2ta/view?usp=sharing?raw=true)
 
-### `yarn install`
+## Installation & Run
 
-Instal All dependencies in this project
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-### Link
-
-emailjs: https://www.emailjs.com/
-tailwindcss: https://tailwindcss.com/
-heroicons: https://github.com/tailwindlabs/heroicons
-
-### Video Tutorial
-
-You can see my youtube video for this project in [here](https://youtu.be/7huux0RAX30)
+- Fork and Clone this Repo: `https://github.com/Hopnguyen2601/sharing.git`
+- Switch to feature/emailjs branch
+- Run command: `npm install`
+- Add on your EmailJs Service id , User id and template id in the App.js file
+- Run command: `npm start`
+- View app at browser: `http://localhost:3000/`
