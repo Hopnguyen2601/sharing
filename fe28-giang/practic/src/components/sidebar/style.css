@@ -1,0 +1,17 @@
+.side-bar{
+    width: 200px;
+    height: 500px;
+    background-color: rgb(255, 230, 0);
+    color: white;
+}
+ul{
+    padding-inline-start: 0px;
+    list-style: none;
+    margin: 0px;
+}
+li{
+    border-bottom: 1px solid white ;
+    padding: 10px 0px;
+    text-align: center;
+    display: block;
+}

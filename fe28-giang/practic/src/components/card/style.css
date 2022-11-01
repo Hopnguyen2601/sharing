@@ -1,0 +1,24 @@
+.card{
+    width: 150px;
+    height: 170px;
+    background: rgba(128, 255, 0, 0.536);
+    margin: 20px;
+    border-radius: 10px;
+}
+.card-header>*{
+    padding: 4px 0px;
+    margin: 0px;
+}
+.card-header{
+    margin: 0px auto;
+    height: 75px;
+    width: 150px;
+    border-bottom: 2px solid black ;
+}
+.card>h5{
+    margin: 7px auto;
+}
+button{
+    width: 70px;
+    margin: 0px auto;
+}

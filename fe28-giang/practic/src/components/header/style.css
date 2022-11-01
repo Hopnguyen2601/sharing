@@ -1,0 +1,40 @@
+.header{
+    width: 1000px;
+    height: 70px;
+    background: #675BF1;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header>.search{
+    display: flex;
+}
+.create-task, .search{
+    padding: 10px 0px;
+    text-align: center;
+}
+.create-task{
+   width: 200px;
+   color: white;
+   border: 1px solid white;
+   border-radius: 3px;
+   margin-left: 30px;
+}
+.search{
+    width: 650px;
+}
+.search>div{
+    padding: 10px 0px;
+    width: 100px;
+    border: 1px solid white;
+   border-radius: 3px;
+    margin-left: 20px;
+    color: white;
+}
+input{
+    width: 500px;
+    height: 25px !important;
+    margin: auto 0px;
+}
