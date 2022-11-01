@@ -13,6 +13,4 @@ const MainContent = (props) => {
   );
 };
 
-MainContent.propTypes = {};
-
 export default MainContent;
