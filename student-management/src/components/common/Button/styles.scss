@@ -1,0 +1,14 @@
+.btn {
+  color: var(--white);
+  background: var(--blue);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 600;
+
+  &:hover {
+    color: var(--blue);
+    background: var(--btn-hover);
+  }
+}

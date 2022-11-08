@@ -1,0 +1,21 @@
+.field {
+  padding: 10px 0;
+  text-align: left;
+
+  &__label {
+    text-transform: capitalize;
+    padding-bottom: 20px;
+    color: var(--blue);
+    font-weight: 600;
+  }
+
+  &__input {
+    margin: 5px 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    color: rgba(0, 0, 0, 0.87);
+    box-sizing: border-box;
+  }
+}

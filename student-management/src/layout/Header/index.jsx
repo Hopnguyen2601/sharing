@@ -7,7 +7,7 @@ import './styles.scss';
 const Header = () => {
   return (
     <div className="main-header">
-      <div className="main-header__wrapper">
+      <div className="main-header__wrapper container">
         <Link to={'/'}>
           <h1 className="main-header__title">Class Management FE28</h1>
         </Link>
