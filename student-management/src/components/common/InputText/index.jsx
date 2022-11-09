@@ -10,6 +10,7 @@ const InputText = (props) => {
       <label className="field__label">{name}</label>
       <input
         className="field__input"
+        required
         type={type}
         name={name}
         placeholder={`Please input your ${name}`}

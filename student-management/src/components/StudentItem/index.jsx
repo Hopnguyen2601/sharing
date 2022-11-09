@@ -1,31 +1,32 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-StudentItem.propTypes = {};
+import Button from '../common/Button';
 
-function StudentItem(props) {
+import './styles.scss';
+
+function StudentItem({ student, onHandleDelete }) {
+  // Push student id to delete student
+  const handleDelete = async () => {
+    onHandleDelete(student.id);
+  };
+
   return (
-    <div className="item">
-      <img className="ui avatar image" src={user} alt="user" />
-      <div className="content">
-        {/* <Link
-          to={{ pathname: `/contact/${id}`, state: { contact: props.contact } }}
-        >
-          <div className="header">{name}</div>
-          <div>{email}</div>
-        </Link> */}
+    <div className="student">
+      <img
+        className="student__avatar"
+        src={student.image}
+        alt="student avatar"
+      />
+      <p className="student__name">{student.name}</p>
+      <p>{student.email}</p>
+
+      <div className="student__action">
+        <Link to={`/edit/${student.id}`} state={{ student: student }}>
+          <Button title="Edit" />
+        </Link>
+        <Button title="Delete" onHanleClick={handleDelete} />
       </div>
-      {/* <i
-        className="trash alternate outline icon"
-        style={{ color: 'red', marginTop: '7px', marginLeft: '10px' }}
-        onClick={() => props.clickHander(id)}
-      ></i> */}
-      {/* <Link to={{ pathname: `/edit`, state: { contact: props.contact } }}>
-        <i
-          className="edit alternate outline icon"
-          style={{ color: 'blue', marginTop: '7px' }}
-        ></i>
-      </Link> */}
     </div>
   );
 }

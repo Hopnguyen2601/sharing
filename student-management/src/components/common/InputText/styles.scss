@@ -5,7 +5,7 @@
   &__label {
     text-transform: capitalize;
     padding-bottom: 20px;
-    color: var(--blue);
+    color: var(--green);
     font-weight: 600;
   }
 
@@ -14,8 +14,13 @@
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid rgba(34, 36, 38, 0.15);
-    color: rgba(0, 0, 0, 0.87);
+    border: 1px solid var(--green);
+    color: var(--blue);
     box-sizing: border-box;
+    border-radius: 10px;
+  }
+
+  &__error {
+    color: var(--red);
   }
 }

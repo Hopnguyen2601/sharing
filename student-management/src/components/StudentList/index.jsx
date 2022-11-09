@@ -1,34 +1,55 @@
-import React from 'react';
-// import { Link } from 'react-router-dom';
-// import ContactCard from './ContactCard';
+import React, { useEffect, useState } from 'react';
+
+import studentApis from '../../apis/studentApis';
+import { STATUS_CODE } from '../../constants';
+import StudentItem from '../StudentItem';
 
 import './styles.scss';
 
-const StudentList = ({ students }) => {
-  console.log(students);
+const StudentList = (props) => {
+  const [studentList, setStudentList] = useState([]);
+  const [isLoadData, setIsLoadData] = useState(false);
 
-  // const deleteConactHandler = (id) => {
-  //   props.getContactId(id);
-  // };
+  const fetchData = async () => {
+    const response = await studentApis.getAll();
 
-  // const renderStudentList = props.students.map((contact) => {
-  //   return (
-  //     <p>Hello</p>
-  //     // <ContactCard
-  //     //   contact={contact}
-  //     //   clickHander={deleteConactHandler}
-  //     //   key={contact.id}
-  //     // />
-  //   );
-  // });
+    // Check status for post api
+    if (response.status === STATUS_CODE.OK) {
+      setStudentList(response.data);
+    } else {
+      alert('Get list failed.');
+      console.log(response.status);
+    }
+  };
+
+  // Handle delete student by id
+  const handleDeleteStudent = async (studentId) => {
+    const response = await studentApis.delete(studentId);
+    // Check status for post api
+    if (response.status === STATUS_CODE.OK) {
+      alert('Congratulations!! Deleted successfully.');
+      setIsLoadData(true);
+    } else {
+      alert('Sorry!! Please try again.');
+      console.log(response.status);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [isLoadData]); //This will run only once
+
   return (
     <div className="students">
       <h2 className="title">Student List</h2>
       <div className="students__list">
-        {students.map((student, index) => (
-          <div>
-            <p>hello</p>
-          </div>
+        {studentList.map((item) => (
+          <StudentItem
+            student={item}
+            key={item.id}
+            onHandleDelete={handleDeleteStudent}
+            isUpdate="false"
+          />
         ))}
       </div>
     </div>
