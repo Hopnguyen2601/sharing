@@ -14,11 +14,11 @@ Student management for FE28
 ### Installation
 
 Install all packages in package.json
-`bash npm install `
+`npm install`
 
 ### Run
 
 1. Run json-server:
-   `bash npm run server `
+   `npm run server`
 2. Run app:
-   `bash npm start `
+   `npm start`
