@@ -8,9 +8,10 @@ import './styles.scss';
 
 const StudentList = (props) => {
   const [studentList, setStudentList] = useState([]);
-  const [isLoadData, setIsLoadData] = useState(false);
+  const [isLoadData, setIsLoadData] = useState(true);
 
   const fetchData = async () => {
+    setIsLoadData(true);
     const response = await studentApis.getAll();
 
     // Check status for post api
@@ -28,7 +29,7 @@ const StudentList = (props) => {
     // Check status for post api
     if (response.status === STATUS_CODE.OK) {
       alert('Congratulations!! Deleted successfully.');
-      setIsLoadData(true);
+      setIsLoadData(false);
     } else {
       alert('Sorry!! Please try again.');
       console.log(response.status);
@@ -37,20 +38,24 @@ const StudentList = (props) => {
 
   useEffect(() => {
     fetchData();
-  }, [isLoadData]); //This will run only once
+  }, [isLoadData]);
 
   return (
     <div className="students">
       <h2 className="title">Student List</h2>
       <div className="students__list">
-        {studentList.map((item) => (
-          <StudentItem
-            student={item}
-            key={item.id}
-            onHandleDelete={handleDeleteStudent}
-            isUpdate="false"
-          />
-        ))}
+        {!studentList.length ? (
+          <p className="students__not-found">No results found!</p>
+        ) : (
+          studentList.map((item) => (
+            <StudentItem
+              student={item}
+              key={item.id}
+              onHandleDelete={handleDeleteStudent}
+              isUpdate="false"
+            />
+          ))
+        )}
       </div>
     </div>
   );

@@ -13,6 +13,7 @@ const studentApis = {
       return response;
     } catch (error) {
       console.log(error);
+      alert('Cannot connect to API.');
     }
     // axiosClient
     //   .post('/students', student)
@@ -41,6 +42,7 @@ const studentApis = {
       return response;
     } catch (error) {
       console.log(error);
+      alert('Cannot connect to API.');
     }
   },
 
@@ -60,6 +62,7 @@ const studentApis = {
       return response;
     } catch (error) {
       console.log(error);
+      alert('Cannot connect to API.');
     }
   },
 
@@ -80,6 +83,7 @@ const studentApis = {
       return response;
     } catch (error) {
       console.log(error);
+      alert('Cannot connect to API.');
     }
   },
 };
