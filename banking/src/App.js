@@ -5,10 +5,10 @@ import { withdrawMoney } from './redux/actions';
 
 import './App.css';
 
-function App(state, props) {
+function App() {
   let dispatch = useDispatch();
   const total = useSelector((state) => state.totalAmount);
-  const username = useSelector((state) => state.usename);
+  const username = useSelector((state) => state.username);
 
   const handleWithdrawMoney = (e) => {
     const amount = e.target.dataset.amount;
