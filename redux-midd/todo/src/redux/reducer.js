@@ -1,9 +1,9 @@
-import { combineReducers } from 'redux';
+// import { combineReducers } from 'redux';
 
-import todoListReducer from '../components/TodoList/TodosSlice';
+// import todoListReducer from '../components/TodoList/TodosSlice';
 
-const rootReducer = combineReducers({
-  todoList: todoListReducer,
-});
+// const rootReducer = combineReducers({
+//   todoList: todoListReducer,
+// });
 
-export default rootReducer;
+// export default rootReducer;

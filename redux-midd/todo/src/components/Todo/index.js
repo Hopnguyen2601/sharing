@@ -1,7 +1,8 @@
 import { Row, Checkbox } from 'antd';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { toggleTodoStatus } from '../../redux/actions';
+import { todoLislSlice } from '../TodoList/TodosSlice';
+// import { toggleTodoStatus } from '../../redux/actions';
 
 export default function Todo({ name, completed, id }) {
   const dispatch = useDispatch();
@@ -10,7 +11,8 @@ export default function Todo({ name, completed, id }) {
 
   const toggleCheckbox = () => {
     setChecked(!checked);
-    dispatch(toggleTodoStatus(id));
+    // dispatch(toggleTodoStatus(id));
+    dispatch(todoLislSlice.actions.changeTodoStatus(id));
   };
 
   return (

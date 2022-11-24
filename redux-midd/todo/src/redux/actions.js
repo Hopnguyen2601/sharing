@@ -1,13 +1,13 @@
-export const addTodo = (data) => {
-  return {
-    type: 'todoList/addTodo',
-    payload: data,
-  };
-};
+// export const addTodo = (data) => {
+//   return {
+//     type: 'ADD_TODO',
+//     payload: data,
+//   };
+// };
 
-export const toggleTodoStatus = (todoId) => {
-  return {
-    type: 'todoList/toggleTodoStatus',
-    payload: todoId,
-  };
-};
+// export const changeTodoStatus = (todoId) => {
+//   return {
+//     type: 'CHANGE_TODO_STATUS',
+//     payload: todoId,
+//   };
+// };
