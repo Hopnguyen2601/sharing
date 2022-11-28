@@ -1,0 +1,44 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "name": "Learning React",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "name": "Learning Redux",
+      "completed": false
+    },
+    {
+      "id": "2c261b54-88b9-485c-a1b1-180e7c98faac",
+      "name": "Learning redux thunk",
+      "completed": false
+    },
+    {
+      "id": "cdccf6ed-1968-4c71-a95e-31762f5b0c43",
+      "name": "redux",
+      "completed": false
+    },
+    {
+      "id": "cf5059f0-7c5a-4c43-91f0-d6c97ff93f3a",
+      "name": "redux",
+      "completed": false
+    },
+    {
+      "id": "44b2c4ed-9968-493a-b4dc-35d592c2bde5",
+      "name": "redux",
+      "completed": false
+    },
+    {
+      "id": "803cb562-e9f1-4fff-8f9f-b2a8df76ca3e",
+      "name": "redux",
+      "completed": false
+    },
+    {
+      "id": "dd631915-6e39-4478-b83b-fbcf8a6a63ee",
+      "name": "redux",
+      "completed": false
+    }
+  ]
+}

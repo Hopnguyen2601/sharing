@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Input, Row, Col, Button } from 'antd';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { todoListSlice } from './TodoListSlice';
+import { addNewTodo, fetchTodos } from './TodoListSlice';
 import Todo from '../Todo';
 
 const TodoList = (props) => {
-  const todoList = useSelector((state) => state.todoList);
+  const todoList = useSelector((state) => state.todoList.todos);
 
   const [inputValue, setInputValue] = useState('');
   const dispatch = useDispatch();
@@ -16,9 +16,13 @@ const TodoList = (props) => {
     setInputValue(event.target.value);
   };
 
+  useEffect(() => {
+    dispatch(fetchTodos());
+  }, [dispatch]);
+
   const handleAddTodo = () => {
     dispatch(
-      todoListSlice.actions.addTodo({
+      addNewTodo({
         id: uuidv4(),
         name: inputValue,
         completed: false,

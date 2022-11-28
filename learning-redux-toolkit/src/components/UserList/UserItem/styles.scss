@@ -1,0 +1,16 @@
+.user {
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  border-bottom: 1px solid var(--green);
+  padding-top: 10px;
+
+  &__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  &__name {
+    font-weight: 600;
+  }
+}
