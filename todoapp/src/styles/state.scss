@@ -1,0 +1,20 @@
+.row {
+  margin-top: 6px;
+}
+
+.col-30 {
+  float: left;
+  width: 30%;
+}
+
+.col-70 {
+  float: left;
+  width: 70%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
